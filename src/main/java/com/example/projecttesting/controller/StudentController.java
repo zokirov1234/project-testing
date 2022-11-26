@@ -4,7 +4,6 @@ import com.example.projecttesting.model.dto.StudentRequest;
 import com.example.projecttesting.model.entity.StudentEntity;
 import com.example.projecttesting.service.StudentService;
 import lombok.AllArgsConstructor;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -27,4 +26,6 @@ public class StudentController {
     public List<StudentEntity> getAll() {
         return studentService.getAllStudents();
     }
+
+
 }
