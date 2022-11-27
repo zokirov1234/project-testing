@@ -1,30 +1,22 @@
 package com.example.projecttesting.service;
 
 import com.example.projecttesting.exp.EmailFoundException;
-import com.example.projecttesting.model.dto.StudentRequest;
 import com.example.projecttesting.model.entity.StudentEntity;
 import com.example.projecttesting.repository.StudentRepository;
-import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.ArgumentCaptor;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.web.client.HttpClientErrorException;
 
 import java.util.Optional;
 
 import static org.assertj.core.api.Assertions.assertThatThrownBy;
 import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
-import static org.assertj.core.api.InstanceOfAssertFactories.OPTIONAL;
-import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.ArgumentMatchers.anyString;
 import static org.mockito.BDDMockito.given;
 import static org.mockito.Mockito.verify;
-import static org.mockito.MockitoAnnotations.openMocks;
 
 @ExtendWith(MockitoExtension.class)
 class StudentServiceTest {
