@@ -15,19 +15,16 @@ import java.util.Optional;
 public class StudentService {
     private final StudentRepository studentRepository;
 
-    public boolean save(StudentRequest studentRequest) {
+    public boolean save(StudentEntity student) {
         Optional<StudentEntity> existsEmail =
-                studentRepository.findByEmail(studentRequest.email());
+                studentRepository.findByEmail(student.getEmail());
         if (existsEmail.isPresent()) {
             throw new EmailFoundException(
-                    "Email " + studentRequest.email() + " taken"
+                    "Email " + student.getEmail() + " taken"
             );
         }
-        StudentEntity studentEntity = new StudentEntity();
-        studentEntity.setEmail(studentRequest.email());
-        studentEntity.setName(studentRequest.name());
-        studentEntity.setPassword(studentRequest.password());
-        studentRepository.save(studentEntity);
+
+        studentRepository.save(student);
         return true;
     }
 

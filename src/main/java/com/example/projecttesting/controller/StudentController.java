@@ -17,9 +17,9 @@ public class StudentController {
 
     @PostMapping("/add")
     public boolean addStudent(
-            @RequestBody StudentRequest studentRequest
+            @RequestBody StudentEntity student
     ) {
-        return studentService.save(studentRequest);
+        return studentService.save(student);
     }
 
     @GetMapping("/getAll")
