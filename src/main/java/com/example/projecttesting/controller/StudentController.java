@@ -1,6 +1,6 @@
 package com.example.projecttesting.controller;
 
-import com.example.projecttesting.model.dto.StudentRequest;
+
 import com.example.projecttesting.model.entity.StudentEntity;
 import com.example.projecttesting.service.StudentService;
 import lombok.AllArgsConstructor;

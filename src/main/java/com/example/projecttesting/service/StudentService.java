@@ -1,7 +1,6 @@
 package com.example.projecttesting.service;
 
 import com.example.projecttesting.exp.EmailFoundException;
-import com.example.projecttesting.model.dto.StudentRequest;
 import com.example.projecttesting.model.entity.StudentEntity;
 import com.example.projecttesting.repository.StudentRepository;
 import lombok.AllArgsConstructor;
